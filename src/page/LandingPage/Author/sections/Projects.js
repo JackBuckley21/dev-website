@@ -38,7 +38,7 @@ function Places() {
             <TransparentBlogCard
               image={post2}
               title="Wren Kitchens Kitchen Planner"
-              description="I help with the development and maintenance of a web-based kitchen planner at Wren Kitchens for 3 years. The planner allowed users to create 2D and 3D plans of their kitchens, take accurate measurements, and generate automatic customer documentation."
+              description="I have been helping with the development and maintenance of a web-based kitchen planner at Wren Kitchens for 3 years. The planner allowed users to create 2D and 3D plans of their kitchens, take accurate measurements, and generate automatic customer documentation."
               action={{
                 type: "external",
                 route: "https://www.wrenkitchens.com/kitchen-design/online-planner",
