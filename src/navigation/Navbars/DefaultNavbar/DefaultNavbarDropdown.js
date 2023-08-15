@@ -4,23 +4,12 @@ import PropTypes from "prop-types";
 // react-router-dom components
 import { Link } from "react-router-dom";
 
-import Collapse from "@mui/material/Collapse";
 import Icon from "@mui/material/Icon";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function DefaultNavbarDropdown({
-  name,
-  icon,
-  children,
-  collapseStatus,
-  light,
-  href,
-  route,
-  collapse,
-  ...rest
-}) {
+function DefaultNavbarDropdown({ name, icon, light, href, route, collapse, ...rest }) {
   const linkComponent = {
     component: "a",
     href,
@@ -70,11 +59,6 @@ function DefaultNavbarDropdown({
           </Icon>
         </MKTypography>
       </MKBox>
-      {children && (
-        <Collapse in={Boolean(collapseStatus)} timeout={400} unmountOnExit>
-          {children}
-        </Collapse>
-      )}
     </>
   );
 }

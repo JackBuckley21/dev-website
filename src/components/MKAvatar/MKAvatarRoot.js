@@ -47,8 +47,8 @@ export default styled(Avatar)(({ theme, ownerState }) => {
       break;
     case "xxl":
       sizeValue = {
-        width: pxToRem(110),
-        height: pxToRem(110),
+        width: pxToRem(150),
+        height: pxToRem(150),
         fontSize: fontSize.md,
       };
       break;

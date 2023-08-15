@@ -12,10 +12,10 @@ function Profile() {
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
         <Grid container item xl={12} justifyContent="center" mx="auto">
-          <MKBox mt={{ xs: -16, md: -20 }} textAlign="center">
+          <MKBox mt={{ xs: -20, md: -24 }} textAlign="center">
             <MKAvatar src={profilePicture} alt="Jack" size="xxl" shadow="xxl" />
           </MKBox>
-          <Grid container justifyContent="center" py={6}>
+          <Grid container justifyContent="center" py={4}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                 <MKTypography variant="h3">Jack Buckley</MKTypography>
@@ -30,7 +30,6 @@ function Profile() {
                   variant="body1"
                   fontWeight="light"
                   color="info"
-                  mt={3}
                   sx={{
                     width: "max-content",
                     display: "flex",
