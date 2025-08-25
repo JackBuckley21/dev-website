@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState } from 'react';
-import {motion, AnimatePresence, Variants} from 'framer-motion';
+import React, {useState} from 'react';
+import {AnimatePresence, motion, Variants} from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 import Image from 'next/image';
 
@@ -19,7 +19,7 @@ const projects = [
         description: "Architected and led the front-end development of a B2B recycled phone trade-in platform, creating a scalable and intuitive user interface that streamlined sales and trade-in workflows.",
         tags: ["React", "Next.js", "Node.js", "PHP", "Tailwind CSS", "Zustand"],
         liveUrl: "https://www.urbusiness.co.uk/urPortal",
-        githubUrl: "https://github.com/JackBuckley21/portal-demo",
+        // githubUrl: "https://github.com/JackBuckley21/portal-demo",
         imageUrl: "https://www.urbusiness.co.uk/assets/images/urBusiness_logo_grey.svg",
         category: "professional"
     },
@@ -49,7 +49,7 @@ const projects = [
 ];
 
 const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: {opacity: 0, y: 20},
     visible: {
         opacity: 1,
         y: 0,
@@ -100,13 +100,14 @@ const ProjectsSection = () => {
                             <motion.div
                                 key={project.title}
                                 layout
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.8 }}
-                                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                                initial={{opacity: 0, scale: 0.8}}
+                                animate={{opacity: 1, scale: 1}}
+                                exit={{opacity: 0, scale: 0.8}}
+                                transition={{duration: 0.4, ease: 'easeInOut'}}
                                 className="flex flex-col bg-[#111] rounded-2xl overflow-hidden group transform transition-shadow duration-500 hover:shadow-[0_0_15px_rgba(129,140,248,0.5),_0_0_35px_rgba(79,70,229,0.3)]"
                             >
-                                <div className="h-48 bg-gray-900/50 flex items-center justify-center p-5 overflow-hidden">
+                                <div
+                                    className="h-48 bg-gray-900/50 flex items-center justify-center p-5 overflow-hidden">
                                     <Image
                                         src={project.imageUrl}
                                         alt="Descriptive alt text"
@@ -120,14 +121,20 @@ const ProjectsSection = () => {
                                     <p className="text-gray-400 mb-4 flex-grow">{project.description}</p>
                                     <div className="flex flex-wrap gap-2 my-4">
                                         {project.tags.map((tag, i) => (
-                                            <span key={i} className="bg-gray-800 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">
+                                            <span key={i}
+                                                  className="bg-gray-800 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
                                     <div className="flex items-center space-x-4 mt-auto">
-                                        {project.liveUrl && ( <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors duration-300">Site</a> )}
-                                        {project.githubUrl && (<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors duration-300">Source Code</a>)}
+                                        {project.liveUrl && (
+                                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
+                                               className="text-white hover:text-indigo-400 transition-colors duration-300">Site</a>)}
+                                        {project.githubUrl && (
+                                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+                                               className="text-white hover:text-indigo-400 transition-colors duration-300">Source
+                                                Code</a>)}
                                     </div>
                                 </div>
                             </motion.div>

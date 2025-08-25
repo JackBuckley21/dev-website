@@ -51,7 +51,7 @@ export default function GridBackground() {
         >
             <defs>
                 <pattern id="grid" width={GRID} height={GRID} patternUnits="userSpaceOnUse">
-                    <path d={`M ${GRID} 0 L 0 0 0 ${GRID}`} fill="none" stroke="white" strokeWidth="3" opacity="0.2"/>
+                    <path d={`M ${GRID} 0 L 0 0 0 ${GRID}`} fill="none" stroke="white" strokeWidth="4" opacity="0.3"/>
                 </pattern>
             </defs>
             <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)"/>
@@ -65,7 +65,7 @@ export default function GridBackground() {
                         r={4}
                         fill={d.color}
                         initial={{scale: 0, opacity: 0}}
-                        animate={{scale: 1.5, opacity: [0, 0.5, 0]}}
+                        animate={{scale: 1.75, opacity: [0, 0.5, 0]}}
                         exit={{scale: 0, opacity: 0}}
                         transition={{duration: 2, ease: "easeInOut"}}
                     />
