@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         siteName: "Jack Buckley Portfolio",
         images: [
             {
-                url: "/og-image.png",
+                url: "/preview.png",
                 width: 1200,
                 height: 630,
                 alt: "Jack Buckley's Portfolio",
