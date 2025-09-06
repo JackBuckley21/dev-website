@@ -31,17 +31,17 @@ const ContactSection = () => {
                     Get In Touch
                 </motion.h2>
                 <motion.p variants={itemVariants} className="text-gray-400 max-w-2xl mx-auto mb-12">
-                    I`&apos;m currently open to new opportunities and collaborations. Feel free to reach out!
+                    I&apos;m currently open to new opportunities and collaborations. Feel free to reach out!
                 </motion.p>
                 <motion.div variants={itemVariants} className="flex justify-center items-center space-x-6">
                     <a href="mailto:jack.buckley21@gmail.com" className="group flex items-center space-x-2 bg-gray-800 text-white py-3 px-6 rounded-full hover:bg-indigo-600 transition-all duration-300">
                         <EnvelopeIcon className="h-6 w-6" />
                         <span>Email Me</span>
                     </a>
-                    <a href="https://github.com/JackBuckley21" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300 p-3 rounded-full bg-gray-800 hover:bg-gray-700">
+                    <a href="https://github.com/JackBuckley21" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-400 hover:text-white transition-colors duration-300 p-3 rounded-full bg-gray-800 hover:bg-gray-700">
                         <Github size={24} />
                     </a>
-                    <a href="https://www.linkedin.com/in/jack-buckley-ux/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300 p-3 rounded-full bg-gray-800 hover:bg-gray-700">
+                    <a href="https://www.linkedin.com/in/jack-buckley-ux/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors duration-300 p-3 rounded-full bg-gray-800 hover:bg-gray-700">
                         <Linkedin size={24} />
                     </a>
                 </motion.div>
