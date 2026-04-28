@@ -11,7 +11,7 @@ const projects = [
         description: "As a key developer in a small team, I am building a comprehensive healthcare search and booking system that simplifies how patients find and schedule care, while empowering providers with a dedicated B2B management platform.",
         tags: ["Next.js", "TypeScript", "Tailwind CSS", "Mollie", "AWS", "Node.js", "Motion"],
         liveUrl: "https://finbogo.com/",
-        imageUrl: "https://finbogo.com/landing/landingpage-logo.svg",
+        imageUrl: "/finbogo_logo.svg",
         category: "professional"
     },
     {
