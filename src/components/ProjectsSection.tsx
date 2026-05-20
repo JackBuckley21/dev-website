@@ -1,7 +1,7 @@
 "use client"
 
-import React, {useState} from 'react';
-import {AnimatePresence, motion, Variants} from 'framer-motion';
+import React, { useState } from 'react';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 import Image from 'next/image';
 
@@ -34,22 +34,23 @@ const projects = [
     {
         title: "Wren Kitchens - Kitchen Planner",
         description: "I have been helping with the development and maintenance of a web-based kitchen planner at Wren Kitchens for 3 years. The planner allowed users to create 2D and 3D plans of their kitchens, take accurate measurements, and generate automatic customer documentation",
-        tags: ["javascript", "react", "node.js", "tailwindcss", "mySQL", "TypeScript", "AWS"],
+        tags: ["javascript", "react", "node.js", "Tailwind CSS", "mySQL", "TypeScript", "AWS"],
         liveUrl: "https://www.wrenkitchens.com/kitchen-design/online-planner",
         imageUrl: "/wren.png",
         category: "professional"
     },
     {
-        "title": "Project: Catalyst",
-        "description": "An in-development, AI-driven mobile health platform built with Flutter. The application is designed to create adaptive, personalized programs to guide users through physical recovery and track progress over time.",
-        "tags": ["Flutter", "Dart", "AI", "Health-Tech", "Mobile App", "Firebase", "Google Cloud"],
-        "imageUrl": "/project-catalyst.png",
+        "title": "Michi Health",
+        "description": "An AI-driven mobile health platform that delivers adaptive, personalized exercise and rehabilitation programs. The application empowers users to manage their physical recovery journey with data-driven progress tracking and tailored guidance.",
+        "tags": ["Flutter", "Dart", "AI", "Health-Tech", "Mobile App", "Firebase", "Google Cloud", "Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+        "liveUrl": "https://michihealth.co.uk/",
+        "imageUrl": "/michi.png",
         "category": "personal"
     }
 ];
 
 const itemVariants: Variants = {
-    hidden: {opacity: 0, y: 20},
+    hidden: { opacity: 0, y: 20 },
     visible: {
         opacity: 1,
         y: 0,
@@ -80,11 +81,10 @@ const ProjectsSection = () => {
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
-                            className={`px-4 py-2 md:px-6 md:py-2 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${
-                                activeFilter === filter
-                                    ? 'bg-white text-black'
-                                    : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-700'
-                            }`}
+                            className={`px-4 py-2 md:px-6 md:py-2 text-sm md:text-base font-semibold rounded-full transition-all duration-300 ${activeFilter === filter
+                                ? 'bg-white text-black'
+                                : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-700'
+                                }`}
                         >
                             {filter.charAt(0).toUpperCase() + filter.slice(1)}
                         </button>
@@ -100,10 +100,10 @@ const ProjectsSection = () => {
                             <motion.div
                                 key={project.title}
                                 layout
-                                initial={{opacity: 0, scale: 0.8}}
-                                animate={{opacity: 1, scale: 1}}
-                                exit={{opacity: 0, scale: 0.8}}
-                                transition={{duration: 0.4, ease: 'easeInOut'}}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.8 }}
+                                transition={{ duration: 0.4, ease: 'easeInOut' }}
                                 className="flex flex-col bg-[#111] rounded-2xl overflow-hidden group transform transition-shadow duration-500 hover:shadow-[0_0_15px_rgba(129,140,248,0.5),_0_0_35px_rgba(79,70,229,0.3)]"
                             >
                                 <div
@@ -122,7 +122,7 @@ const ProjectsSection = () => {
                                     <div className="flex flex-wrap gap-2 my-4">
                                         {project.tags.map((tag, i) => (
                                             <span key={i}
-                                                  className="bg-gray-800 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">
+                                                className="bg-gray-800 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">
                                                 {tag}
                                             </span>
                                         ))}
@@ -130,10 +130,10 @@ const ProjectsSection = () => {
                                     <div className="flex items-center space-x-4 mt-auto">
                                         {project.liveUrl && (
                                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
-                                               className="text-white hover:text-indigo-400 transition-colors duration-300">Site</a>)}
+                                                className="text-white hover:text-indigo-400 transition-colors duration-300">Site</a>)}
                                         {project.githubUrl && (
                                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
-                                               className="text-white hover:text-indigo-400 transition-colors duration-300">Source
+                                                className="text-white hover:text-indigo-400 transition-colors duration-300">Source
                                                 Code</a>)}
                                     </div>
                                 </div>
